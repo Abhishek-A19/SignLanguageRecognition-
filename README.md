@@ -16,9 +16,9 @@ Now the training of the CNN is performed by loading the data using ImageDataGene
 Finally, the bounding box for detecting the region of interest is created and accumulated average is calculated by identifying foreground object as we had done during dataset creation. Then we find the maximum contour and if contour is detected this means that hand is detected and hence threshold of the region of interest is treated as a test image. The previously saved model is loaded and the fed with the threshold of image of region of interest containing the hand as input to the model for prediction. The model created earlier is loaded and set with some variables such as initializing background variables and setting the dimensions of the region of interest. The function to calculate background accumulated weighted average is used and the hand is segmented by getting maximum contours and threshold image of hand detected.
 
 # OBJECTIVES
-•To help the dumb and deaf to optimise their communication with others.
+• To help the dumb and deaf to optimise their communication with others.
 
-•Creating a sign detector, which detects numbers from one to ten
+• Creating a sign detector, which detects numbers from one to ten
 
 # SYSTEM REQUIREMENTS
 Software Requirements: Python, Jupyter IDE, Numpy, CV2(open cv), Keras and Tensorflow.
@@ -36,36 +36,36 @@ Implementation involves:
 
 # Creating the Data set
 
-•We will be creating a data set and getting a live feed from the video cam which is saves in a directory.
+• We will be creating a data set and getting a live feed from the video cam which is saves in a directory.
 
-•Now for creating the dataset we get the live cam feed using OpenCV and create an ROI.
+• Now for creating the dataset we get the live cam feed using OpenCV and create an ROI.
 
-•We will have an accumulated weighted average in order to distinguish the object as foreground.
+• We will have an accumulated weighted average in order to distinguish the object as foreground.
 
-•After we have the accumulated average for the background, we subtract it from every frame that we read after 60 frames to find any object that covers the background.
+• After we have the accumulated average for the background, we subtract it from every frame that we read after 60 frames to find any  object that covers the background.
 
-•We calculate the threshold value and determine if there is any foreground object being detected.
+• We calculate the threshold value and determine if there is any foreground object being detected.
 
 # Training the CNN on the Captured data set
 
-•We load the data using ImageDataGenerator of keras through which we can use the flow_from_directory function to load the train and test set data.
+• We load the data using ImageDataGenerator of keras through which we can use the flow_from_directory function to load the train and test set data.
 
-•plotImages function is for plotting images of the dataset loaded.
+• plotImages function is for plotting images of the dataset loaded.
 
-•We fit the model and save the model for it to be used.
+• We fit the model and save the model for it to be used.
 
 # Predicting the data
 
-•We create a bounding box for detecting the ROI and calculate the accumulated average and identify a foreground object.
+• We create a bounding box for detecting the ROI and calculate the accumulated average and identify a foreground object.
 
-•We find the max contour and if contour is detected that means a hand is detected so the threshold of the ROI is treated as a test image.
+• We find the max contour and if contour is detected that means a hand is detected so the threshold of the ROI is treated as a test image.
 
-•We load the previously saved model using keras.models.load_model and feed the threshold image of the ROI consisting of the hand as an input to the model for prediction.
+• We load the previously saved model using keras.models.load_model and feed the threshold image of the ROI consisting of the hand as an input to the model for prediction.
 
-•Detecting the hand now on the live cam feed.
+• Detecting the hand now on the live cam feed.
 
 # EXPECTED NEW APPLICATIONS
-•Conversion of sign language to English.
+• Conversion of sign language to English.
 
 # CONCLUSION	
 Sign Language Recognition System has been developed from classifying static signs and alphabets, to the system for recognition. After the recognition of the static signs, we will try to implement dynamic signs for recognition. This project will help the dumb and deaf people to communicate with others in an efficient manner. This project is mainly focused on static signs/ manual signs/ alphabets/ numerals.
