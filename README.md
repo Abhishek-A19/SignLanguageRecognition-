@@ -34,7 +34,7 @@ Implementation involves:
 
 3)Predicting the data
 
-1)Creating the Data set
+# Creating the Data set
 
 •We will be creating a data set and getting a live feed from the video cam which is saves in a directory.
 
@@ -46,7 +46,7 @@ Implementation involves:
 
 •We calculate the threshold value and determine if there is any foreground object being detected.
 
-2)Training the CNN on the Captured data set
+# Training the CNN on the Captured data set
 
 •We load the data using ImageDataGenerator of keras through which we can use the flow_from_directory function to load the train and test set data.
 
@@ -54,11 +54,11 @@ Implementation involves:
 
 •We fit the model and save the model for it to be used.
 
-3)Predicting the data
+# Predicting the data
 
 •We create a bounding box for detecting the ROI and calculate the accumulated average and identify a foreground object.
 
-•we find the max contour and if contour is detected that means a hand is detected so the threshold of the ROI is treated as a test image.
+•We find the max contour and if contour is detected that means a hand is detected so the threshold of the ROI is treated as a test image.
 
 •We load the previously saved model using keras.models.load_model and feed the threshold image of the ROI consisting of the hand as an input to the model for prediction.
 
